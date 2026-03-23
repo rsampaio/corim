@@ -309,17 +309,6 @@ func (o *Triples) AddDevIdentityKey(val *KeyTriple) *Triples {
 	return o
 }
 
-// AddDomainDependency appends a domain-dependency-triple to DomainDependencies.
-func (o *Triples) AddDomainDependency(val DomainDependencyTriple) *Triples {
-	if o != nil {
-		if o.DomainDependencies == nil {
-			o.DomainDependencies = &DomainDependencyTriples{}
-		}
-		*o.DomainDependencies = append(*o.DomainDependencies, val)
-	}
-	return o
-}
-
 // nolint:gocritic
 func (o *Triples) AddCondEndorseSeries(val *CondEndorseSeriesTriple) *Triples {
 	if o != nil {
